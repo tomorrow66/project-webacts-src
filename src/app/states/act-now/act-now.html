@@ -1,0 +1,82 @@
+<!-- Intro Header -->
+<header class="intro page">
+  <div>
+    <img src="assets/images/banner_act-now.jpg" alt="">
+  </div>
+  <div class="intro-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="intro-text animated fadeIn">Welcome to Project WEb ACTs. The site is intended to help you make an informed decision about becoming an organ donor. Below you will find our video library. Each video has a different topic: <span class="topics">Introduction, Fairness in Organ Allocation, Fairness in HealthCare Delivery, Against My Religion and Let’s Talk About Life.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="video-playlist" class="content-section">
+  <div class="video-playlist-section">
+    <div class="videogular-container">
+      <videogular vg-theme="actNow.config.theme.url">
+        <vg-media vg-src="actNow.config.sources"
+                  vg-tracks="actNow.config.tracks">
+        </vg-media>
+
+        <vg-controls>
+          <vg-play-pause-button></vg-play-pause-button>
+          <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
+          <vg-scrub-bar>
+            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+          </vg-scrub-bar>
+          <vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
+          <vg-time-display>{{ totalTime | date:'mm:ss' }}</vg-time-display>
+          <vg-volume>
+            <vg-mute-button></vg-mute-button>
+            <vg-volume-bar></vg-volume-bar>
+          </vg-volume>
+          <vg-fullscreen-button></vg-fullscreen-button>
+        </vg-controls>
+
+        <vg-analytics vg-track-info="actNow.config.plugins.analytics"></vg-analytics>
+        <vg-overlay-play></vg-overlay-play>
+        <vg-poster vg-url='actNow.config.plugins.poster'></vg-poster>
+      </videogular>
+    </div>
+    <div class="container" style="margin-top:26px;">
+      <div class="pull-right">
+        <a class="btn btn-default btn-lg" ui-sref="fairness-in-organ-allocation" href="/fairness-in-organ-allocation">Next Video <i class="fa fa-chevron-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- External Web links Section -->
+<section class="content-section" style="padding-top:0;">
+  <div class="bottom-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h2>In the U.S., African Americans are especially hard hit by the shortage of organs.</h2>
+          </div>
+          <p>To learn more about kidney transplant, click on the following links:</p>
+          <ul>
+            <li><a href="http://www.transplantliving.org/">Transplant Living Website (UNOS)</a></li>
+            <li><a href="http://www.unos.org/donation/index.php?topic=kpd">Kidney Paired Donation (UNOS)</a></li>
+            <li><a href="http://www.kidneyfund.org/kidney-health/brochures/krt-fact-sheets/krt_treatmentoptions-transplant.pdf">American Kidney Fund – Brochure for Treatment Options</a></li>
+            <li><a href="https://www.kidney.org/videos/">National Kidney Foundation – Patient Videos</a></li>
+          </ul>
+          <p>There are more African Americans on the transplant list due to a variety of reasons. One reason is that African Americans more often have chronic diseases (like high blood pressure and diabetes).</p>
+          <p>Did you know that the presence of high blood pressure in African Americans is among the highest in the world? High blood pressure affects more than 40% of African Americans. It <a href="http://www.heart.org/HEARTORG/Conditions/HighBloodPressure/UnderstandYourRiskforHighBloodPressure/High-Blood-Pressure-and-African-Americans_UCM_301832_Article.jsp">appears earlier</a> in African Americans than whites and is usually more severe. And, African Americans are <a href="http://pathology.jhu.edu/pc/PartAfAm.php?area=pa">nearly twice as likely as whites</a> to have diabetes mellitus.</p>
+          <p>Another reason so many African Americans are waiting for a transplant is the limited number of African American donors. The kidney transplant matching process is very dependent on HLA (human lymphocyte antigens) matching. HLAs are proteins found in the blood that are inherited from one’s parents. The HLA markers in African Americans tend to be more mixed or varied than in whites; thus, the organs may be less compatible between donors and African American recipients.</p>
+          <p>Organs that do not match well are more likely to be rejected and those that do match are less likely to be rejected. With the need for transplant so great in African Americans, one way to address the problem is to increase the number of African American donors.
+          </p>
+          <p>To learn more about African Americans and time spent on waitlist, view <a ui-sref="fairness-in-organ-allocation" href="/fairness-in-organ-allocation">video 2</a></p>
+          <p>After exploring this website and becoming informed about the facts, think about registering on your state website to give the most precious gift of all – the gift of life.</p>
+
+          <a href="http://donatelifegeorgia.org" class="btn btn-default btn-lg">Donatelife.net</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

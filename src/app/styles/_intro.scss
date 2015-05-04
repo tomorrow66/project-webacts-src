@@ -1,0 +1,137 @@
+.intro {
+  display: block;
+  position: relative;
+  width: 100%;
+  // height: 50vw;
+  text-align: center;
+  color: #fff;
+  margin-top: 68px;
+
+  .intro-body {
+    // @include vertical-align;
+
+    .brand-heading {
+      // font-family: 'Playfair Display SC', serif;
+      // font-style: italic;
+      font-size: 40px;
+      text-transform: uppercase;
+      letter-spacing: -5px;
+    }
+    .intro-text {
+      font-size: 18px;
+      font-weight: 400;
+
+      &.animated {
+        -webkit-animation-duration: 3s;
+        -moz-animation-duration: 3s;
+        animation-duration: 3s;
+      }
+    }
+  }
+}
+
+.intro.home {
+  margin-top: 68px;
+  height: 350px;
+  background: url(../assets/images/banner_home_intro.jpg) no-repeat bottom center scroll;
+  background-color: #000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+.intro-body {
+  padding-top: 100px;
+}
+
+.intro.page {
+  height: auto;
+  .intro-body {
+    background-color: #232d40;
+    padding-top: 30px;
+
+    .intro-text {
+      // font-family: 'Playfair Display SC', serif;
+      font-style: italic;
+      // font-weight: 900;
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min - 1) {
+  .intro.home {
+    height: 50vw;
+  }
+}
+
+@media (min-width: $screen-md-min - 1) {
+  .intro.home {
+    // height: 50vw;
+    margin-top: 0;
+
+    .intro-body {
+      padding-top: 200px;
+      .brand-heading {
+        font-size: 100px;
+      }
+    }
+
+    .intro-body .intro-text {
+      font-size: 25px;
+      .topics {
+        font-weight: 700;
+        font-style: italic;
+      }
+    }
+  }
+
+  .intro.page {
+    margin-top: 68px;
+
+    .intro-body .intro-text {
+      margin-top: 0px;
+      font-size: 22px;
+      text-align: left;
+    }
+  }
+}
+
+.btn-circle {
+  width: 70px;
+  height: 70px;
+  margin-top: 15px;
+  padding: 7px 16px;
+  border: 2px solid #fff;
+  border-radius: 35px;
+  font-size: 40px;
+  color: #fff;
+  background: 0 0;
+  -webkit-transition: background .3s ease-in-out;
+  -moz-transition: background .3s ease-in-out;
+  transition: background .3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    color: #fff;
+    background: rgba(255,255,255,.1);
+  }
+
+  i.animated {
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: 1s;
+  }
+
+  &:hover i.animated {
+    -webkit-animation-name: pulse;
+    -moz-animation-name: pulse;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+  }
+}

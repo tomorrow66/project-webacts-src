@@ -1,0 +1,48 @@
+.btn {
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.btn-default {
+  border: 1px solid #c12b38;
+  color: #c12b38;
+  background-color: transparent;
+}
+
+.btn-lg {
+  border-radius: 3px;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+  border: 1px solid #c12b38;
+  outline: 0;
+  color: #FFF;
+  background-color: #c12b38;
+}
+
+ul.banner-social-buttons {
+  margin-top: 0;
+}
+
+@media(max-width:1199px) {
+  ul.banner-social-buttons {
+    margin-top: 15px;
+  }
+}
+
+@media(max-width:767px) {
+  ul.banner-social-buttons li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  ul.banner-social-buttons li:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,120 @@
+<!doctype html>
+<html class="no-js" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title ng-bind="pageTitle"></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css({.tmp,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-motion/dist/angular-motion.css" />
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/videogular-themes-default/videogular.css" />
+    <link rel="stylesheet" href="bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+    <!-- build:css({.tmp,src}) styles/app.css -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="app/index.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-class="pageClass" ng-cloak>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <nav ng-include="'components/navbar/navbar.html'"></nav>
+    
+    <div ui-view></div>
+
+  <footer>
+    <div class="container">
+      <div class="col-xs-6 col-sm-6">
+        <p class="small">&copy; 2014 Web Acts. All Rights Reserved.</p>
+      </div>
+      <div class="col-xs-6 col-sm-6 links">
+        <ul class="nav nav-pills pull-right">
+          <li><a class="link" href="http://donatelife.net/">Donate Life</a></li>
+          <li><a class="link" href="http://unos.org/">UNOS</a></li>
+          <li><a class="link" href="http://lifelinkfound.org/">LifeLink</a></li>
+          <li><a class="link" href="http://organdonor.gov/aboutus.html">Organ Donor</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-58839963-1');
+      ga('require', 'displayfeatures');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-strap/dist/angular-strap.js"></script>
+    <script src="bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
+    <script src="bower_components/jquery.easing/js/jquery.easing.js"></script>
+    <script src="bower_components/waypoints/waypoints.js"></script>
+    <script src="bower_components/angulartics/src/angulartics.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-ga.js"></script>
+    <script src="bower_components/videogular/videogular.js"></script>
+    <script src="bower_components/videogular-controls/vg-controls.js"></script>
+    <script src="bower_components/videogular-buffering/vg-buffering.js"></script>
+    <script src="bower_components/videogular-overlay-play/vg-overlay-play.js"></script>
+    <script src="bower_components/videogular-poster/vg-poster.js"></script>
+    <script src="bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.js"></script>
+    <script src="bower_components/angular-morph/dist/angular-morph.min.js"></script>
+    <script src="bower_components/videogular-analytics/analytics.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,src}) scripts/app.js -->
+    <!-- inject:js -->
+    <script src="app/states/religious-belief/religious-belief.js"></script>
+    <script src="app/states/religious-belief/religious-belief.controller.js"></script>
+    <script src="app/states/lets-talk-about-life/lets-talk-about-life.js"></script>
+    <script src="app/states/lets-talk-about-life/lets-talk-about-life.controller.js"></script>
+    <script src="app/states/home/home.js"></script>
+    <script src="app/states/home/home.controller.js"></script>
+    <script src="app/states/fairness-organ-allocation/organ-allocation.js"></script>
+    <script src="app/states/fairness-organ-allocation/organ-allocation.controller.js"></script>
+    <script src="app/states/fairness-healthcare-delivery/healthcare-delivery.js"></script>
+    <script src="app/states/fairness-healthcare-delivery/healthcare-delivery.controller.js"></script>
+    <script src="app/states/act-now/act-now.js"></script>
+    <script src="app/states/act-now/act-now.controller.js"></script>
+    <script src="app/app.js"></script>
+    <script src="components/navbar/navbar.controller.js"></script>
+    <script src="app/theme.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+  </body>
+</html>
