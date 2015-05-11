@@ -8,8 +8,8 @@
 }
 
 .btn-default {
-  border: 1px solid #c12b38;
-  color: #c12b38;
+  border: 5px solid #BF3C1E;
+  color: #DDBD6A;
   background-color: transparent;
 }
 
@@ -19,7 +19,7 @@
 
 .btn-default:hover,
 .btn-default:focus {
-  border: 1px solid #c12b38;
+  border: 5px solid #c12b38;
   outline: 0;
   color: #FFF;
   background-color: #c12b38;
@@ -27,6 +27,32 @@
 
 ul.banner-social-buttons {
   margin-top: 0;
+}
+
+.cta-floated {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  z-index: 5;
+
+  .btn-default {
+    color: #fff;
+    height: 200px;
+    background-color: #232d40;
+    border: 5px solid #DDBD6A;
+    border-radius: 100px;
+    width: 200px;
+    padding: 72px 0px;
+
+    span {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 700;
+      font-style: italic;
+      text-transform: none;
+      letter-spacing: 0.04em;
+    }
+  }
 }
 
 @media(max-width:1199px) {

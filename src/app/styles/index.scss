@@ -1,5 +1,5 @@
 // Import Google Fonts
-// @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Montserrat:400,700||Playfair+Display+SC:900italic");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900,900italic|Montserrat:400,700|Playfair+Display:400italic,700italic,900italic|Roboto+Condensed:400,700");
 
 @import 'variables';
 @import 'vendor';
@@ -200,6 +200,42 @@ input {
 
 .off {
   display: none;
+}
+
+// Test
+#svg{
+   transform: rotate(-90deg);
+   float: right;
+}
+
+section.progress-container{
+  display: block;
+  height: 200px;
+  width: 200px;
+  margin: 20px auto;
+  position: relative;
+}
+
+circle#empty{
+  stroke: #ededed;
+  stroke-width: 5px;
+  color: red;
+}
+
+circle#percent-loaded{
+ transition: stroke-dashoffset 1.6 ease-out;
+  transition-delay: 1s ;
+  stroke: #DDBD6A;
+  stroke-width: 5px;
+}
+
+#chart-percent {
+  fill: #fff;
+}
+
+#chart-percent-text {
+  font-family: 'Playfair Display', serif;
+  fill: #fff;
 }
 
 // injector

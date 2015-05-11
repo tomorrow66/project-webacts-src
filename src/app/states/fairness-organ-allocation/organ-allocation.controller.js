@@ -1,5 +1,7 @@
 'use strict';
 
+//https://drive.google.com/file/d/0B8YhAdfjIlGtTlBPbndnMjFWd1U/view?usp=sharing
+
 // organAllocationCtrl.js
 function organAllocationCtrl ($rootScope, $sce, $state, $log) {
   /* jshint validthis:true */
@@ -11,7 +13,7 @@ function organAllocationCtrl ($rootScope, $sce, $state, $log) {
     vm.config = {
       preload: 'none',
       sources: [
-        {src: $sce.trustAsResourceUrl('https://www.googledrive.com/host/0B9BUn-WivWcpbVJtUHphVV83MGM'), type: 'video/mp4'},
+        {src: $sce.trustAsResourceUrl('https://www.googledrive.com/host/0B8YhAdfjIlGtTlBPbndnMjFWd1U'), type: 'video/mp4'},
       ],
       plugins: {
         poster: 'assets/images/video-covers/v2.jpg'

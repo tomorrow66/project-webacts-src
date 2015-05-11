@@ -1,5 +1,6 @@
 'use strict';
 
+// https://drive.google.com/file/d/0B8YhAdfjIlGtbzVnRWZyMmlsZm8/view?usp=sharing
 // healthcareDeliveryCtrl.js
 function healthcareDeliveryCtrl ($rootScope, $sce, $state, $log) {
   /* jshint validthis:true */
@@ -11,7 +12,7 @@ function healthcareDeliveryCtrl ($rootScope, $sce, $state, $log) {
     vm.config = {
       preload: 'none',
       sources: [
-        {src: $sce.trustAsResourceUrl('https://www.googledrive.com/host/0B9BUn-WivWcpdndjT3dEbHVUejg'), type: 'video/mp4'},
+        {src: $sce.trustAsResourceUrl('https://www.googledrive.com/host/0B8YhAdfjIlGtbzVnRWZyMmlsZm8'), type: 'video/mp4'},
       ],
       plugins: {
         poster: 'assets/images/video-covers/v3.jpg'

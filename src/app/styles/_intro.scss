@@ -11,7 +11,7 @@
     // @include vertical-align;
 
     .brand-heading {
-      // font-family: 'Playfair Display SC', serif;
+      // font-family: 'Playfair Display', serif;
       // font-style: italic;
       font-size: 40px;
       text-transform: uppercase;
@@ -41,19 +41,48 @@
 }
 
 .intro-body {
-  padding-top: 100px;
+  width: 30%;
+  padding-top: 20px;
 }
 
 .intro.page {
+  position: relative;
   height: auto;
   .intro-body {
-    background-color: #232d40;
-    padding-top: 30px;
+    position: absolute;
+    bottom: 20px;
 
+    .intro-title {
+      width: 450px;
+      height: 162px;
+      background-color: #c12b38;
+      text-align: left;
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+
+      h1 {
+        font-family: 'Lato', sans-serif;
+        font-size: 48px;
+        font-weight: 900;
+        font-style: italic;
+        padding: 20px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
     .intro-text {
-      // font-family: 'Playfair Display SC', serif;
-      font-style: italic;
-      // font-weight: 900;
+      font-family: 'Lato', sans-serif;
+      padding: 20px;
+
+      a {
+        color: #DDBD6A;
+        &:hover, &:focus {
+          color: #DDBD6A;
+          text-decoration: underline;
+        }
+      }
     }
   }
 }
@@ -90,7 +119,7 @@
 
     .intro-body .intro-text {
       margin-top: 0px;
-      font-size: 22px;
+      font-size: 18px;
       text-align: left;
     }
   }
