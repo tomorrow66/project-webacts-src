@@ -7,6 +7,17 @@
   transition: all .3s ease-in-out;
 }
 
+.home {
+  .btn-default {
+    border: 1px solid #c12b38;
+    color: #c12b38;
+    background-color: transparent;
+
+    &:hover, &:focus {
+      border: 1px solid #c12b38;
+    }
+  }
+}
 .btn-default {
   border: 5px solid #BF3C1E;
   color: #DDBD6A;
