@@ -7,3 +7,43 @@
     }
   }
 }
+
+.fairness-in-organ-allocation {
+  .intro-banner {
+    background-image: url('/assets/images/banner_fairness_in_organ_allocation_sm.jpg');
+    @media(min-width: $screen-sm-min - 1) {
+      background-image: url('/assets/images/banner_fairness_in_organ_allocation.jpg');
+      background-position: right center;
+    }
+  }
+}
+
+.fairness-in-healthcare-delivery {
+  .intro-banner {
+    background-image: url('/assets/images/banner_fairness_in_healthcare_delivery_sm.jpg');
+    @media(min-width: $screen-sm-min - 1) {
+      background-image: url('/assets/images/banner_fairness_in_healthcare_delivery.jpg');
+      background-position: right center;
+    }
+  }
+}
+
+.religious-belief {
+  .intro-banner {
+    background-image: url('/assets/images/banner_religious_belief_sm.jpg');
+    @media(min-width: $screen-sm-min - 1) {
+      background-image: url('/assets/images/banner_religious_belief.jpg');
+      background-position: right center;
+    }
+  }
+}
+
+.lets-talk-about-life {
+  .intro-banner {
+    background-image: url('/assets/images/banner_lets_talk_about_life_sm.jpg');
+    @media(min-width: $screen-sm-min - 1) {
+      background-image: url('/assets/images/banner_lets_talk_about_life.jpg');
+      background-position: right center;
+    }
+  }
+}

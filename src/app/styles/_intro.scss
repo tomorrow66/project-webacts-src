@@ -38,6 +38,14 @@
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+
+  .intro-body {
+    position: absolute;
+    top: 80px;
+    @media(min-width: $screen-sm-min - 1) {
+      position: relative;
+    }
+  }
 }
 
 .intro.page {
