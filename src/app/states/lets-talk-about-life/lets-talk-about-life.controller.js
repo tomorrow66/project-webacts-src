@@ -1,5 +1,6 @@
 'use strict';
 
+// https://drive.google.com/file/d/0B8YhAdfjIlGtMUdGWkhiRER2QkE/view?usp=sharing
 // againstMyReligionCtrl.js
 function letsTalkAboutLifeCtrl ($rootScope, $sce, $state, $log) {
   /* jshint validthis:true */
@@ -11,21 +12,21 @@ function letsTalkAboutLifeCtrl ($rootScope, $sce, $state, $log) {
     vm.config = {
       preload: 'none',
       sources: [
-        {src: $sce.trustAsResourceUrl('https://www.googledrive.com/host/0B9BUn-WivWcpR0lISmJuVWIyZnc'), type: 'video/mp4'},
+        {src: $sce.trustAsResourceUrl('https://www.googledrive.com/host/0B8YhAdfjIlGtMUdGWkhiRER2QkE'), type: 'video/mp4'},
       ],
       plugins: {
-        poster: 'assets/images/video-covers/v5.jpg'
-      },
-      analytics: {
-        category: 'WEb ACTs videos',
-        label: 'Let\'s Talk About Life: Donation Intentions',
-        events: {
-          ready: true,
-          play: true,
-          pause: true,
-          stop: true,
-          complete: true,
-          progress: 10
+        poster: 'assets/images/video-covers/v5.jpg',
+        analytics: {
+          category: 'WEb ACTs videos',
+          label: 'Let\'s Talk About Life: Donation Intentions',
+          events: {
+            ready: true,
+            play: true,
+            pause: true,
+            stop: true,
+            complete: true,
+            progress: 10
+          }
         }
       }
     };
