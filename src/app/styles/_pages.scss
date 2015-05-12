@@ -1,0 +1,9 @@
+.act-now {
+  .intro-banner {
+    background-image: url('/assets/images/banner_act_now_sm.jpg');
+    @media(min-width: $screen-sm-min - 1) {
+      background-image: url('/assets/images/banner_act_now.jpg');
+      background-position: right center;
+    }
+  }
+}
