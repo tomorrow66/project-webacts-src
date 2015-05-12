@@ -6,3 +6,4 @@ dist/
 *.zip
 *.src
 *.m4v
+.DS_Store
