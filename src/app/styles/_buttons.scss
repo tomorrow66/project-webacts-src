@@ -48,12 +48,18 @@ ul.banner-social-buttons {
 
   .btn-default {
     color: #fff;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     background-color: #232d40;
     border: 5px solid #DDBD6A;
     border-radius: 100px;
-    width: 200px;
-    padding: 72px 0px;
+    padding: 28px 0;
+
+    @media(min-width: $screen-sm-min - 1) {
+      width: 150px;
+      height: 150px;
+      padding: 50px 0px;
+    }
 
     span {
       font-family: 'Playfair Display', serif;
