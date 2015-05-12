@@ -1,6 +1,8 @@
 'use strict';
 
 //https://drive.google.com/a/tomorrowpictures.com/file/d/0B8YhAdfjIlGtWEFUaTU2Wm9Bejg/view?usp=sharing
+//
+//https://drive.google.com/file/d/0B8YhAdfjIlGtQ09VZjdFd0FHaE0/view?usp=sharing
 
 // introductionCtrl.js
 function actNowCtrl ($rootScope, $sce, $state, $log) {
@@ -14,7 +16,7 @@ function actNowCtrl ($rootScope, $sce, $state, $log) {
     vm.config = {
       preload: 'none',
       sources: [
-        {src: $sce.trustAsResourceUrl('https://www.googledrive.com/host/0B8YhAdfjIlGtWEFUaTU2Wm9Bejg'), type: 'video/mp4'},
+        {src: $sce.trustAsResourceUrl('https://www.googledrive.com/host/0B8YhAdfjIlGtQ09VZjdFd0FHaE0'), type: 'video/mp4'},
       ],
       plugins: {
         poster: 'assets/images/video-covers/v1.jpg',
