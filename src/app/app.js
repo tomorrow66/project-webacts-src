@@ -8,6 +8,7 @@
     'ngTouch',
     'ngSanitize',
     'ui.router',
+    'mgcrea.ngStrap',
     'ui.bootstrap',
     'angulartics',
     'angulartics.google.analytics',

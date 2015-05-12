@@ -1,34 +1,24 @@
-<div class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<div class="navbar navbar-custom navbar-fixed-top ng-untouched ng-valid ng-scope ng-dirty ng-valid-parse" role="navigation" ng-model="collapsed" bs-navbar="" bs-collapse="">
   <div class="contain">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" ng-click="isCollapsed = !isCollapsed">
-        MENU <i class="fa fa-bars"></i>
+      <button type="button" class="navbar-toggle" bs-collapse-toggle="" data-toggle="collapse">MENU <i class="fa fa-bars"></i>
       </button>
-      <a class="navbar-brand page-scroll logo" ui-sref="home" href="/">
-        <img src="assets/images/logo.png" alt="">
+      <a class="navbar-brand page-scroll logo" ui-sref="home" href="#/"><img src="assets/images/logo.png" alt="">
       </a>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-right navbar-main-collapse" bs-collapse-target>
+    <div class="collapse navbar-collapse navbar-right navbar-main-collapse am-collapse" bs-collapse-target="">
       <ul class="nav navbar-nav">
-        <li>
-          <a ui-sref="act-now" href="/act-now" bs-collapse-toggle>Act Now</a>
+        <li><a ui-sref="act-now" href="/act-now" bs-collapse-toggle="" data-toggle="collapse">Act Now</a>
         </li>
-        <li>
-          <a ui-sref="fairness-in-organ-allocation" href="/fairness-in-organ-allocation" bs-collapse-toggle>Fairness In Organ Allocation</a>
+        <li><a ui-sref="fairness-in-organ-allocation" href="/fairness-in-organ-allocation" bs-collapse-toggle="" data-toggle="collapse">Fairness In Organ Allocation</a>
         </li>
-        <li>
-          <a ui-sref="fairness-in-healthcare-delivery" href="/fairness-in-healthcare-delivery" bs-collapse-toggle>Fairness In Healthcare Delivery</a>
+        <li><a ui-sref="fairness-in-healthcare-delivery" href="/fairness-in-healthcare-delivery" bs-collapse-toggle="" data-toggle="collapse">Fairness In Healthcare Delivery</a>
         </li>
-        <li>
-          <a ui-sref="religious-belief" href="/religious-belief" bs-collapse-toggle>Religious Belief</a>
+        <li><a ui-sref="against-my-religion" href="/against-my-religion" bs-collapse-toggle="" data-toggle="collapse">Against My Religion</a>
         </li>
-        <li>
-          <a ui-sref="lets-talk-about-life" href="/lets-talk-about-life" bs-collapse-toggle>Let's Talk About Life: Donation Intentions</a>
+        <li><a ui-sref="lets-talk-about-life" href="/lets-talk-about-life" bs-collapse-toggle="" data-toggle="collapse">Let's Talk About Life: Donation Intentions</a>
         </li>
       </ul>
-
     </div>
   </div>
 </div>
