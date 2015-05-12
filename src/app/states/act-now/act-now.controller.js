@@ -7,6 +7,7 @@ function actNowCtrl ($rootScope, $sce, $state, $log) {
   /* jshint validthis:true */
   var vm = this;
   vm.title = $state.current.title;
+
   activate();
 
   function activate() {
@@ -16,18 +17,18 @@ function actNowCtrl ($rootScope, $sce, $state, $log) {
         {src: $sce.trustAsResourceUrl('https://www.googledrive.com/host/0B8YhAdfjIlGtWEFUaTU2Wm9Bejg'), type: 'video/mp4'},
       ],
       plugins: {
-        poster: 'assets/images/video-covers/v1.jpg'
-      },
-      analytics: {
-        category: 'WEb ACTs videos',
-        label: 'Act Now',
-        events: {
-          ready: true,
-          play: true,
-          pause: true,
-          stop: true,
-          complete: true,
-          progress: 10
+        poster: 'assets/images/video-covers/v1.jpg',
+        analytics: {
+          category: 'WEb ACTs videos',
+          label: 'Act Now',
+          events: {
+            ready: true,
+            play: true,
+            pause: true,
+            stop: true,
+            complete: true,
+            progress: 10
+          }
         }
       }
     };

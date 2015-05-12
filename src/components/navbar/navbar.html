@@ -1,7 +1,7 @@
-<div class="navbar navbar-custom navbar-fixed-top" role="navigation" ng-model="collapsed" bs-navbar bs-collapse>
+<div class="navbar navbar-custom navbar-fixed-top" role="navigation">
   <div class="contain">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" bs-collapse-toggle>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" ng-click="isCollapsed = !isCollapsed">
         MENU <i class="fa fa-bars"></i>
       </button>
       <a class="navbar-brand page-scroll logo" ui-sref="home" href="/">

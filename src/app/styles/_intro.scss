@@ -40,20 +40,18 @@
   background-size: cover;
 }
 
-.intro-body {
-  width: 40%;
-  padding-top: 20px;
-}
-
 .intro.page {
   position: relative;
   height: auto;
+  
   .intro-body {
     position: absolute;
     top: 20px;
+    width: 40%;
+    padding-top: 20px;
 
     .intro-title {
-      width: 100%;
+      width: 450px;
       height: 100px;
       background-color: #c12b38;
       text-align: left;

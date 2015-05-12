@@ -15,18 +15,18 @@ function religiousBeliefCtrl ($rootScope, $sce, $state, $log) {
         {src: $sce.trustAsResourceUrl('https://www.googledrive.com/host/0B8YhAdfjIlGtX2h2VFNGd2tHLUk'), type: 'video/mp4'},
       ],
       plugins: {
-        poster: 'assets/images/video-covers/v4.jpg'
-      },
-      analytics: {
-        category: 'WEb ACTs videos',
-        label: 'Religous Belief',
-        events: {
-          ready: true,
-          play: true,
-          pause: true,
-          stop: true,
-          complete: true,
-          progress: 10
+        poster: 'assets/images/video-covers/v4.jpg',
+        analytics: {
+          category: 'WEb ACTs videos',
+          label: 'Religous Belief',
+          events: {
+            ready: true,
+            play: true,
+            pause: true,
+            stop: true,
+            complete: true,
+            progress: 10
+          }
         }
       }
     };
