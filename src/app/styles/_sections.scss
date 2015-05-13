@@ -44,7 +44,12 @@
     padding: 20px;
 
     .btn-lg, .btn-group-lg > .btn {
-      font-size: 10px;
+      font-size: 8px;
+      padding: 5px;
+
+      @media(min-width: $screen-sm-min - 1) {
+        padding: 10px 16px;
+      }
     }
   }
 }
@@ -183,7 +188,7 @@
         border: 10px solid #19202F;
       }
       .btn-lg, .btn-group-lg > .btn {
-        font-size: 18px;
+        font-size: 14px;
       }
     }
   }
