@@ -15,19 +15,7 @@ function healthcareDeliveryCtrl ($rootScope, $sce, $state, $log) {
         {src: $sce.trustAsResourceUrl('https://www.googledrive.com/host/0B8YhAdfjIlGtbzVnRWZyMmlsZm8'), type: 'video/mp4'},
       ],
       plugins: {
-        poster: '/assets/images/video-covers/v3.jpg',
-        analytics: {
-          category: 'WEb ACTs videos',
-          label: 'Fairness In Healthcare Delivery',
-          events: {
-            ready: true,
-            play: true,
-            pause: true,
-            stop: true,
-            complete: true,
-            progress: 10
-          }
-        }
+        poster: '/assets/images/video-covers/v3.jpg'
       }
     };
   }

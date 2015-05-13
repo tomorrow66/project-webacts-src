@@ -17,19 +17,7 @@ function organAllocationCtrl ($rootScope, $sce, $state, $tooltip, $log) {
         {src: $sce.trustAsResourceUrl('https://www.googledrive.com/host/0B8YhAdfjIlGtTlBPbndnMjFWd1U'), type: 'video/mp4'},
       ],
       plugins: {
-        poster: '/assets/images/video-covers/v2.jpg',
-        analytics: {
-          category: 'WEb ACTs videos',
-          label: 'Fairness In Organ Allocation',
-          events: {
-            ready: true,
-            play: true,
-            pause: true,
-            stop: true,
-            complete: true,
-            progress: 10
-          }
-        }
+        poster: '/assets/images/video-covers/v2.jpg'
       }
     };
   }
