@@ -74,7 +74,7 @@
 
     .intro-title {
       width: 250px;
-      height: 50px;
+      height: 70px;
       background-color: #c12b38;
       text-align: left;
       -webkit-transform-style: preserve-3d;
@@ -89,7 +89,10 @@
       h1 {
         font-family: 'Lato', sans-serif;
         font-size: 26px;
-        line-height: 0.8;
+        line-height: 1;
+        @media(min-width: $screen-sm-min - 1) {
+          line-height: 0.8;
+        }
         font-weight: 900;
         text-transform: none;
         font-style: italic;
@@ -106,14 +109,17 @@
         }
 
         &.long-title {
-          font-size: 24px;
+          font-size: 20px;
           @media(min-width: $screen-sm-min - 1) {
             font-size: 42px;
           }
         }
 
         span {
-          font-size: 30px;
+          font-size: 22px;
+          @media(min-width: $screen-sm-min - 1) {
+            font-size: 30px;
+          }
         }
       }
     }

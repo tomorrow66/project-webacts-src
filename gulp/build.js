@@ -6,150 +6,84 @@ var $ = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'main-bower-files', 'uglify-save-license', 'del']
 });
 
-gulp.task('styles', ['wiredep', 'injector:css:preprocessor'], function () {
-  return gulp.src(['src/app/styles/index.scss'])
-    .pipe($.sass({style: 'expanded'}))
-    .on('error', function handleError(err) {
-      console.error(err.toString());
-      this.emit('end');
-    })
-    .pipe($.autoprefixer())
-    .pipe(gulp.dest('.tmp/app/'));
-});
+module.exports = function(options) {
+  gulp.task('partials', function () {
+    return gulp.src([
+      options.src + '/app/**/*.html',
+      options.tmp + '/serve/app/**/*.html'
+    ])
+      .pipe($.minifyHtml({
+        empty: true,
+        spare: true,
+        quotes: true
+      }))
+      .pipe($.angularTemplatecache('templateCacheHtml.js', {
+        module: 'app',
+        root: 'app'
+      }))
+      .pipe(gulp.dest(options.tmp + '/partials/'));
+  });
 
-gulp.task('injector:css:preprocessor', function () {
-  return gulp.src('src/app/index.scss')
-    .pipe($.inject(gulp.src([
-        'src/{app,components}/**/*.scss',
-        '!src/app/styles/index.scss',
-        '!src/app/styles/vendor.scss'
-      ], {read: false}), {
-      transform: function(filePath) {
-        filePath = filePath.replace('src/app/', '');
-        filePath = filePath.replace('src/components/', '../components/');
-        return '@import \'' + filePath + '\';';
-      },
-      starttag: '// injector',
-      endtag: '// endinjector',
-      addRootSlash: false
-    }))
-    .pipe(gulp.dest('src/app/'));
-});
-
-gulp.task('injector:css', ['styles'], function () {
-  return gulp.src('src/index.html')
-    .pipe($.inject(gulp.src([
-        '.tmp/{app,components}/**/*.css',
-        '!.tmp/app/styles/vendor.css'
-      ], {read: false}), {
-      ignorePath: '.tmp',
-      addRootSlash: false
-    }))
-    .pipe(gulp.dest('src/'));
-});
-
-gulp.task('scripts', function () {
-  return gulp.src('src/{app,components}/**/*.js')
-    .pipe($.jshint())
-    .pipe($.jshint.reporter('jshint-stylish'));
-});
-
-gulp.task('injector:js', ['scripts', 'injector:css'], function () {
-  return gulp.src(['src/index.html', '.tmp/index.html'])
-    .pipe($.inject(gulp.src([
-      'src/{app,components}/**/*.js',
-      '!src/{app,components}/**/*.spec.js',
-      '!src/{app,components}/**/*.mock.js'
-    ]).pipe($.angularFilesort()), {
-      ignorePath: 'src',
-      addRootSlash: false
-    }))
-    .pipe(gulp.dest('src/'));
-});
-
-gulp.task('partials', ['consolidate'], function () {
-  return gulp.src(['src/{app,components}/**/*.html', '.tmp/{app,components}/**/*.html'])
-    .pipe($.minifyHtml({
-      empty: true,
-      spare: true,
-      quotes: true
-    }))
-    .pipe($.angularTemplatecache('templateCacheHtml.js', {
-      module: 'app'
-    }))
-    .pipe(gulp.dest('.tmp/inject/'));
-});
-
-gulp.task('html', ['wiredep', 'injector:css', 'injector:js', 'partials'], function () {
-  var htmlFilter = $.filter('*.html');
-  var jsFilter = $.filter('**/*.js');
-  var cssFilter = $.filter('**/*.css');
-  var assets;
-
-  return gulp.src(['src/*.html', '.tmp/*.html'])
-    .pipe($.inject(gulp.src('.tmp/inject/templateCacheHtml.js', {read: false}), {
+  gulp.task('html', ['inject', 'partials'], function () {
+    var partialsInjectFile = gulp.src(options.tmp + '/partials/templateCacheHtml.js', { read: false });
+    var partialsInjectOptions = {
       starttag: '<!-- inject:partials -->',
-      ignorePath: '.tmp',
+      ignorePath: options.tmp + '/partials',
       addRootSlash: false
-    }))
-    .pipe(assets = $.useref.assets())
-    .pipe($.rev())
-    .pipe(jsFilter)
-    .pipe($.ngAnnotate())
-    .pipe($.uglify({preserveComments: $.uglifySaveLicense}))
-    .pipe(jsFilter.restore())
-    .pipe(cssFilter)
-    .pipe($.replace('bower_components/bootstrap-sass-official/assets/fonts/bootstrap','fonts'))
-    .pipe($.csso())
-    .pipe(cssFilter.restore())
-    .pipe(assets.restore())
-    .pipe($.useref())
-    .pipe($.revReplace())
-    .pipe(htmlFilter)
-    .pipe($.minifyHtml({
-      empty: true,
-      spare: true,
-      quotes: true
-    }))
-    .pipe(htmlFilter.restore())
-    .pipe(gulp.dest('dist/'))
-    .pipe($.size({ title: 'dist/', showFiles: true }));
-});
+    };
 
-gulp.task('images', function () {
-  return gulp.src('src/assets/images/**/*')
-    .pipe($.imagemin({
-      optimizationLevel: 3,
-      progressive: true,
-      interlaced: true
-    }))
-    .pipe(gulp.dest('dist/assets/images/'));
-});
+    var htmlFilter = $.filter('*.html');
+    var jsFilter = $.filter('**/*.js');
+    var cssFilter = $.filter('**/*.css');
+    var assets;
 
-gulp.task('videoData', function () {
-  return gulp.src('src/assets/*.json')
-  .pipe($.imagemin({
-    optimizationLevel: 3,
-    progressive: true,
-    interlaced: true
-  }))
-  .pipe(gulp.dest('dist/assets/'));
-});
+    return gulp.src(options.tmp + '/serve/*.html')
+      .pipe($.inject(partialsInjectFile, partialsInjectOptions))
+      .pipe(assets = $.useref.assets())
+      .pipe($.rev())
+      .pipe(jsFilter)
+      .pipe($.ngAnnotate())
+      .pipe($.uglify({ preserveComments: $.uglifySaveLicense })).on('error', options.errorHandler('Uglify'))
+      .pipe(jsFilter.restore())
+      .pipe(cssFilter)
+      .pipe($.replace('../../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/', '../fonts/'))
+      .pipe($.csso())
+      .pipe(cssFilter.restore())
+      .pipe(assets.restore())
+      .pipe($.useref())
+      .pipe($.revReplace())
+      .pipe(htmlFilter)
+      .pipe($.minifyHtml({
+        empty: true,
+        spare: true,
+        quotes: true,
+        conditionals: true
+      }))
+      .pipe(htmlFilter.restore())
+      .pipe(gulp.dest(options.dist + '/'))
+      .pipe($.size({ title: options.dist + '/', showFiles: true }));
+  });
 
-gulp.task('fonts', function () {
-  return gulp.src($.mainBowerFiles())
-    .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
-    .pipe($.flatten())
-    .pipe(gulp.dest('dist/fonts/'));
-});
+  // Only applies for fonts from bower dependencies
+  // Custom fonts are handled by the "other" task
+  gulp.task('fonts', function () {
+    return gulp.src($.mainBowerFiles())
+      .pipe($.filter('**/*.{eot,svg,ttf,woff,woff2}'))
+      .pipe($.flatten())
+      .pipe(gulp.dest(options.dist + '/assets/fonts/'));
+  });
 
-gulp.task('misc', function () {
-  return gulp.src('src/**/*.ico')
-    .pipe(gulp.dest('dist/'));
-});
+  gulp.task('other', function () {
+    return gulp.src([
+      options.src + '/**/*',
+      '!' + options.src + '/**/*.{html,css,js,scss}'
+    ])
+      .pipe(gulp.dest(options.dist + '/'));
+  });
 
-gulp.task('clean', function (done) {
-  $.del(['dist/', '.tmp/'], done);
-});
+  gulp.task('clean', function (done) {
+    $.del([options.dist + '/', options.tmp + '/'], done);
+  });
 
-gulp.task('build', ['html', 'images', 'videoData', 'fonts', 'misc']);
+  gulp.task('build', ['html', 'fonts', 'other']);
+};
