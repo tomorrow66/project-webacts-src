@@ -6,6 +6,19 @@
       background-position: right center;
     }
   }
+
+  .intro-text {
+    @media (min-width: $screen-md-min - 1) {
+      max-width: 550px;
+    }
+  }
+
+  .intro.page {
+
+    .intro-body .intro-text {
+      max-width: 550px;
+    }
+  }
 }
 
 .fairness-in-organ-allocation {
