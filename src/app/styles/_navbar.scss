@@ -48,6 +48,9 @@
       outline: 0;
       background-color: rgba(255,255,255,.3);
     }
+    &.active {
+      background-color: rgba(255,255,255,.6);
+    }
   }
   .contain {
     padding: 0;

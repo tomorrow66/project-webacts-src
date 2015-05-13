@@ -34,6 +34,7 @@ angular.module('app', [
 function config(
   $urlRouterProvider,
   $locationProvider,
+  $navbarProvider,
   $tooltipProvider) {
 
     $urlRouterProvider.otherwise('/'); // Create 404 route
@@ -42,6 +43,9 @@ function config(
 
     angular.extend($tooltipProvider.defaults, {
       html: true
+    });
+    angular.extend($navbarProvider.defaults, {
+      activeClass: 'in'
     });
 }
 
