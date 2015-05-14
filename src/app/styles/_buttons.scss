@@ -9,12 +9,13 @@
 
 .home {
   .btn-default {
-    border: 1px solid #c12b38;
-    color: #c12b38;
-    background-color: transparent;
+    color: #fff;
+    background-color: #c12b38;
+    border-radius: 30px;
+    border: none;
 
     &:hover, &:focus {
-      border: 1px solid #c12b38;
+      border: none;
     }
   }
 }

@@ -51,6 +51,7 @@ function config(
 
 function run($rootScope, AppSettings, $http, $state, $location) {
   $rootScope.showMainNav = $location.path() !== '/';
+  $rootScope.$state = $state;
   // log location change
   $rootScope.$on('$stateChangeSuccess', function () {
     console.log('$stateChangeSuccess changed!', new Date());
