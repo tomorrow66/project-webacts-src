@@ -15,7 +15,7 @@
       // font-style: italic;
       font-size: 40px;
       text-transform: uppercase;
-      letter-spacing: -5px;
+      letter-spacing: -3px;
     }
     .intro-text {
       font-size: 18px;
@@ -46,6 +46,11 @@
     padding: 20px;
     @media(min-width: $screen-sm-min - 1) {
       position: relative;
+    }
+
+    .brand-heading span {
+      color: #c12b38;
+      text-transform: lowercase;
     }
   }
 }
