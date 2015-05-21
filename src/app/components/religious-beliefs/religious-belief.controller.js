@@ -1,8 +1,8 @@
 'use strict';
 
 // https://drive.google.com/file/d/0B8YhAdfjIlGtX2h2VFNGd2tHLUk/view?usp=sharing
-// religiousBeliefCtrl.js
-function religiousBeliefCtrl ($rootScope, $sce, $state, $log) {
+// religiousBeliefsCtrl.js
+function religiousBeliefsCtrl ($rootScope, $sce, $state, $log) {
   /* jshint validthis:true */
   var vm = this;
 
@@ -33,5 +33,5 @@ function religiousBeliefCtrl ($rootScope, $sce, $state, $log) {
   }
 }
 
-angular.module('app.religious-belief')
-  .controller('religiousBeliefCtrl', religiousBeliefCtrl);
+angular.module('app.religious-beliefs')
+  .controller('religiousBeliefsCtrl', religiousBeliefsCtrl);
