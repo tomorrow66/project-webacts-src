@@ -41,11 +41,11 @@
   }
 }
 
-.religious-belief {
+.religious-beliefs {
   .intro-banner {
-    background-image: url('/assets/images/banner_religious_belief_sm.jpg');
+    background-image: url('/assets/images/banner_religious_beliefs_sm.jpg');
     @media(min-width: $screen-sm-min - 1) {
-      background-image: url('/assets/images/banner_religious_belief.jpg');
+      background-image: url('/assets/images/banner_religious_beliefs.jpg');
       background-position: right center;
     }
   }

@@ -22,7 +22,7 @@ angular.module('app', [
   'app.act-now',
   'app.organ-allocation',
   'app.healthcare-delivery',
-  'app.religious-belief',
+  'app.religious-beliefs',
   'app.lets-talk-about-life'
 ])
 .constant('AppSettings', {

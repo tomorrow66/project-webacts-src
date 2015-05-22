@@ -15,7 +15,19 @@ function letsTalkAboutLifeCtrl ($rootScope, $sce, $state, $log) {
         {src: $sce.trustAsResourceUrl('https://www.googledrive.com/host/0B8YhAdfjIlGtMUdGWkhiRER2QkE'), type: 'video/mp4'},
       ],
       plugins: {
-        poster: '/assets/images/video-covers/v5.jpg'
+        poster: '/assets/images/video-covers/v5.jpg',
+        analytics: {
+          category: 'WEb ACTs videos',
+          label: 'Let\'s Talk About Life: Donation Intentions',
+          events: {
+            ready: true,
+            play: true,
+            pause: true,
+            stop: true,
+            complete: true,
+            progress: 10
+          }
+        }
       }
     };
   }

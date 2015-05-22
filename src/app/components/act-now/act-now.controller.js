@@ -19,7 +19,19 @@ function actNowCtrl ($rootScope, $sce, $state, $log) {
         {src: $sce.trustAsResourceUrl('https://www.googledrive.com/host/0B8YhAdfjIlGtQ09VZjdFd0FHaE0'), type: 'video/mp4'},
       ],
       plugins: {
-        poster: '/assets/images/video-covers/v1.jpg'
+        poster: '/assets/images/video-covers/v1.jpg',
+        analytics: {
+          category: 'WEb ACTs videos',
+          label: 'Act Now',
+          events: {
+            ready: true,
+            play: true,
+            pause: true,
+            stop: true,
+            complete: true,
+            progress: 10
+          }
+        }
       }
     };
   }

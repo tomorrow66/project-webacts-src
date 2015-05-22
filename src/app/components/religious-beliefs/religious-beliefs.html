@@ -15,9 +15,9 @@
 <section id="video-playlist" class="content-section">
   <div class="video-playlist-section">
     <div class="videogular-container">
-      <videogular vg-theme="religiousBelief.config.theme.url">
-        <vg-media vg-src="religiousBelief.config.sources"
-                  vg-tracks="religiousBelief.config.tracks">
+      <videogular vg-theme="religiousBeliefs.config.theme.url">
+        <vg-media vg-src="religiousBeliefs.config.sources"
+                  vg-tracks="religiousBeliefs.config.tracks">
         </vg-media>
 
         <vg-controls>
@@ -35,8 +35,9 @@
           <vg-fullscreen-button></vg-fullscreen-button>
         </vg-controls>
 
+        <vg-analytics vg-track-info="religiousBeliefs.config.plugins.analytics"></vg-analytics>
         <vg-overlay-play></vg-overlay-play>
-        <vg-poster vg-url='religiousBelief.config.plugins.poster'></vg-poster>
+        <vg-poster vg-url='religiousBeliefs.config.plugins.poster'></vg-poster>
       </videogular>
     </div>
     <div class="container" style="margin-top:26px;">
@@ -58,7 +59,7 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="cta-floated">
-            <a href="http://donatelifegeorgia.org" class="btn btn-default btn-lg" target="_blank">Donate <br>Now</a>
+            <a href="https://www.donatelifegeorgia.org/register" class="btn btn-default btn-lg" target="_blank">Register <br>Now</a>
           </div>
           <div class="divider"></div>
           <h2>Most major religions support organ donation.<a href="http://organdonor.gov/about/religiousviews.html" target="_blank">*</a></h2>
@@ -66,17 +67,25 @@
           <p>There are various biblical scriptures that can be applied to organ donation such as, “…It is more blessed to give than to receive” - Acts 20:35 and “I have no silver or gold but what I have I give to you in the name of Jesus Christ.” - Acts 3:6</p>
 
           <h3>Catholicism</h3>
-          <p>The Conservative Movement's Committee on Jewish Laws and Standards stated that organ donation is an act of kindness that saves lives.<a href="http://organdonor.gov/about/religiousviews.html" target="_blank">*</a></p>
+          <p>According to Pope John Paul II, “transplants are morally and ethically acceptable to the Vatican.”<a href="http://organdonor.gov/about/religiousviews.html" target="_blank">*</a></p>
 
           <h3>Judaism</h3>
-          <p>According to Pope John Paul II, “transplants are morally and ethically acceptable to the Vatican.”<a href="http://organdonor.gov/about/religiousviews.html" target="_blank">*</a></p>
+          <p>The Conservative Movement's Committee on Jewish Laws and Standards stated that organ donation is an act of kindness that saves lives.<a href="http://organdonor.gov/about/religiousviews.html" target="_blank">*</a></p>
 
           <h3>Islam</h3>
           <p>The Fourth Conference of the Islamic Fiqh Council determined, “It is permissible to transplant an organ from a dead person to a living person whose life or basic essential functions depend on that organ, subject to the condition that permission be given by the deceased before his death, or by his heirs after his death…”<a href="http://organdonor.gov/about/religiousviews.html" target="_blank">*</a></p>
 
-          <div class="divider"></div>
-          <br>
           <p class="highlighted">To inform your decision, consider prayer and discussing donation with your faith leader.</p>
+          <div class="divider"></div>
+          <div class="bottom_more">
+            <div class="more_block">
+              <div class="more_bg"></div>
+              <h2 class="intro_more">To learn more about...</h2>
+              <p>...How organ donation saves lives, view the following video: </p>
+              <p><a ui-sref="lets-talk-about-life" href="/lets-talk-about-life">Let's Talk About Life: Donation Intentions >></a></p>
+            </div>
+          </div>
+          <p class="highlighted">After exploring this website and becoming informed about the facts, think about registering on your state website to give the most precious gift of all – the gift of life.</p>
         </div>
       </div>
     </div>
