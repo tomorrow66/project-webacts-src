@@ -18,12 +18,7 @@ angular.module('app', [
   'com.2fdevs.videogular.plugins.overlayplay',
   'com.2fdevs.videogular.plugins.poster',
   'com.2fdevs.videogular.plugins.buffering',
-  'app.home',
-  'app.act-now',
-  'app.organ-allocation',
-  'app.healthcare-delivery',
-  'app.religious-beliefs',
-  'app.lets-talk-about-life'
+  'app.home'
 ])
 .constant('AppSettings', {
   'appTitle': 'Web Acts',
