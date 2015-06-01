@@ -23,7 +23,9 @@ angular.module('app', [
   'app.organ-allocation',
   'app.healthcare-delivery',
   'app.religious-beliefs',
-  'app.lets-talk-about-life'
+  'app.lets-talk-about-life',
+  'app.pre-study',
+  'app.post-study'
 ])
 .constant('AppSettings', {
   'appTitle': 'Web Acts',
