@@ -23,7 +23,7 @@ function homeCtrl ($scope, $http, $state, $interval, $location) {
       vm.counter = 0;
       vm.count = $interval(function () {
         vm.counter++;
-        if(vm.counter > 30) {
+        if(vm.counter > 600) {
           vm.preTestButton.addClass('hide');
           vm.postTestButton.addClass('show');
           // console.log('3');
