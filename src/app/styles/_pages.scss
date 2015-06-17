@@ -14,7 +14,12 @@
   }
 
   .intro.page {
-
+    .intro-body {
+      width: 85%;
+      @media (min-width: $screen-md-min - 1) {
+        width: 65%;
+      }
+    }
     .intro-body .intro-text {
       max-width: 550px;
     }
